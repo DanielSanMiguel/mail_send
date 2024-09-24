@@ -18,11 +18,15 @@ df = pd.DataFrame(data)
 
 with st.container():
     st.dataframe(df)
+    st.write('INSTRUCCIONES: introduce en mail la dirección de origen (tu correo), en password tu contraseña del correo, si pulsas el selector "elegir destinatario" salta otro campo para escribir el correo de destino, si no lo activas manda los mails a la base de datos')
     mi_mail = st.text_input('mail')
     contrasena = st.text_input('password', type='password')
     selec_dest = st.toggle('elegir destinatario')
     if selec_dest:
         enviar_a = st.text_input('destinatario')
+        st.write('se enviarán los correos a esta dirección')
+    else:
+        st.write('se enviarán los correos a las direcciones de la base de datos')
     b_1 = st.button('Send')
 # Ejemplo de uso
 
