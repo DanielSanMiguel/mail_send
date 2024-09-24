@@ -60,7 +60,7 @@ if __name__ == "__main__":
                 usuario = i['Nombre']
                 asunto = "Correo con logo embebido"
                 cuerpo_html = f"""
-                <h1>Hola</h1>
+                <h1>Hola {usuario}</h1>
                 <p>Este es un correo de prueba con un logo embebido para {usuario}</p>
 
                 """
@@ -69,7 +69,7 @@ if __name__ == "__main__":
                 usuario = i['Nombre']
                 asunto = "Correo con logo embebido"
                 cuerpo_html = f"""
-                <h1>Hola</h1>
+                <h1>Hola {usuario}</h1>
                 <p>Este es un correo de prueba con un logo embebido para {usuario}</p>
                 """
                 enviar_correo_con_logo(i['Mail'], asunto, cuerpo_html)
